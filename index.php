@@ -25,16 +25,18 @@
         <p id="question-text" class="question"></p>
       </div>
       <div class="container-choice">
-        <div class="choices-inner">
-          <button id="btn-option A" class="option"></button>
-          <button id="btn-option B" class="option"></button>
-          <button id="btn-option C" class="option"></button>
-          <button id="btn-option D" class="option"></button>
-        </div>
-      </div>
-      <div class="container-btn">
-        <button id="display-pontos" class="btn-tentar" type="submit">0 pts</button>
-        <button id="enviar" class="btn-tentar" type="submit">Enviar Resposta</button>
+        <form method="$_POST" action="index.php" class="choices-inner">
+          <input type="button" id="btn-option A" class="option">
+          <input type="button" id="btn-option B" class="option">
+          <input type="button" id="btn-option C" class="option">
+          <input type="button" id="btn-option D" class="option">
+
+          <div class="container-btn">
+            <button id="display-pontos" class="btn-tentar" type="button">0 pts</button>
+            <button id="enviar" class="btn-tentar" type="submit">Enviar Resposta</button>
+          </div>
+        
+        </form>
       </div>
     </section>
   </main>

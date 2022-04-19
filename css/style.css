@@ -27,6 +27,7 @@ body {
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: bold;
+  text-shadow: 1px 1px 1px  rgb(122, 122, 122);
 }
 
 .quiz-section {
@@ -36,7 +37,7 @@ body {
 }
 
 .container-quiz {
-  background-image: url(/assets/confetti-carnaval.jpg);
+  background: linear-gradient(86deg, rgb(173, 3, 145) 21%, rgba(3,255,0,1) 54%, rgb(0, 110, 255) 97%);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
