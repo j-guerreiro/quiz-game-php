@@ -27,6 +27,17 @@ $perguntas_quiz = [
   "Em que ano surgiu o trio elétrico no Carnaval de Salvador?"
 ];
 
+$alternativa_0 = array(
+  "pergunta" => "Quais são as cores da bandeira do G.R.E.S. Estação Primeira de Mangueira?", 
+  "A" => "Vermelho e Branco",
+  "B" => "Azul e Branco",
+  "C" => "Verde e Rosa",
+  "D" => "Verde e Amarelo", 
+  "resposta" => "Verde e Rosa"
+);
+
+
+
 /*
 $perguntas_quiz = array (
   //0
@@ -81,9 +92,30 @@ $perguntas_quiz = array (
 
 */
 
-
 $valor = random_int(0,3);
-$questao = $perguntas_quiz[$valor];
+
+
+switch ($valor) {
+  case 0:
+    $questao = $perguntas_quiz[0];
+    $alternativa_A = $alternativa_0["A"];
+    $alternativa_B = $alternativa_0["B"];
+    $alternativa_C = $alternativa_0["C"];
+    $alternativa_D = $alternativa_0["D"];
+    break;
+
+  case 1:
+    $questao = $perguntas_quiz[1];
+    break;
+
+  case 2:
+    $questao = $perguntas_quiz[2];
+    break;
+
+  case 3:
+    $questao = $perguntas_quiz[3];
+    break;
+}
 
 if($_POST) {
 
@@ -119,13 +151,17 @@ if($_POST) {
       </div>
       <div class="container-choice">
         <form method="$_POST" action="index.php" class="choices-inner">
-          <input type="button" id="btn-option A" class="option">
-          <label>
+          <input type="button" id="btn-option A" class="option" required>
+          <label for="btn-option A" id="btn-option A" class="option"><?php echo "{$alternativa_A}" ?></label>
+
           <input type="button" id="btn-option B" class="option">
+          <label for="btn-option B" id="btn-option B" class="option"><?php echo "{$alternativa_B}" ?></label>
           
           <input type="button" id="btn-option C" class="option">
-          
+          <label for="btn-option C" id="btn-option C" class="option"><?php echo "{$alternativa_C}" ?></label>
+
           <input type="button" id="btn-option D" class="option">
+          <label for="btn-option D" id="btn-option D" class="option"><?php echo "{$alternativa_D}" ?></label>
 
           <div class="container-btn">
             <button id="display-pontos" class="btn-tentar" type="button">0 pts</button>
