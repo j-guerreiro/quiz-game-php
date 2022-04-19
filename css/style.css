@@ -1,0 +1,155 @@
+html {
+  font-family: 'Cairo', sans-serif;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: rgb(13, 46, 5);
+  line-height: 1.2;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+body {
+  background: linear-gradient(86deg, rgba(0,37,255,1) 21%, rgba(3,255,0,1) 54%, rgba(251,255,0,1) 97%); 
+  animation-name: animacao-bg;
+  animation-duration: 1s;
+}
+
+.title-game {
+  animation-name: animacao-titulo;
+  animation-duration: 1s;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.quiz-section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.container-quiz {
+  background-image: url(/assets/confetti-carnaval.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  padding: 20px 25px;
+  background-color: rgb(255, 254, 254);
+  position: relative;
+  border-radius: 10px;
+  width: 75%;
+  height: 75%;
+  margin: 0 auto;
+}
+
+.container-question {
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 5px;
+  padding: 20px 25px;
+  background-color: rgba(255, 254, 254, 0.411);
+  position: relative;
+  border-radius: 10px 10px 0px 0px;
+  width: 75%;
+  height: 75%;
+  font-weight: bold;
+}
+
+
+.container-question .question {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1em;
+  font-stretch: expanded;
+}
+
+.container-choice {
+  position: relative;
+  margin: 0 auto;
+  position: relative;
+  padding: 10px 25px;
+  background-color: rgba(255, 254, 254, 0.411);
+  position: relative;
+  border-radius: 0px 0px 10px 10px;
+  width: 75%;
+  height: 75%;
+
+}
+
+.option {
+  position: relative;
+  padding: 20px 25px;
+  background-color: rgb(255, 254, 254);
+  position: relative;
+  border: 2px groove darkgreen;
+  border-radius: 10px 10px 10px 10px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  text-align: left;
+  margin: 0px 0px 5px 0px;
+  flex-flow: column wrap;
+}
+
+.choices-inner .option:focus {
+  background-color: rgb(107, 255, 198);
+  color: rgb(7, 7, 7);
+  border: 2px solid rgb(0, 255, 42);
+}
+
+.container-btn {
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 100%;
+}
+
+/* botao azul */
+.btn-tentar  {
+  margin-top: 10px;
+  border-radius: 100%;
+  height: 100px;
+  width: 7rem;
+  background-color: rgb(0, 68, 255);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 5px 5px 35px rgb(236, 236, 236);
+}
+
+/* botao vermelho */
+.container-btn #display-pontos {
+  margin-top: 10px;
+  border-radius: 100%;
+  width: 7rem;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+.footer .copyright {
+  text-transform: lowercase;
+}
+
+@keyframes animacao-bg {
+  from {background:linear-gradient(86deg, rgba(0,37,255,1) 0%, rgba(3,255,0,1) 62%, rgba(251,255,0,1) 88%); }
+  to {background: linear-gradient(86deg, rgba(251,255,0,1) 4%, rgba(0,37,255,1) 49%, rgba(3,255,0,1) 93%); }  
+}
+
+@keyframes animacao-titulo {
+  from {color: red;}
+  to {color: rgb(132, 0, 255);}  
+}
