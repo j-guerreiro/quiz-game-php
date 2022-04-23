@@ -110,7 +110,7 @@ if($_POST) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/assets/festa-carnaval.ico"/>
+  <link rel="icon" href="../assets/festa-carnaval.ico"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
@@ -132,23 +132,18 @@ if($_POST) {
       </div>
       <div class="container-choice">
         <form method="$_POST" action="index.php" class="choices-inner">
-          <input type="button" id="btn-option A" class="option" required value="<?php echo $_GET["$alternativa_A"]; ?>">
+          <input type="radio" id="btn-option A" name="alternativa" class="option" value="<?php echo $_GET["$alternativa_A"]; ?>" required>
           <label for="btn-option A" id="btn-option A" class="option"><?php echo "{$alternativa_A}" ?></label>
-
-          <input type="button" id="btn-option B" class="option">
+          <input type="radio" id="btn-option B" name="alternativa" class="option" required>
           <label for="btn-option B" id="btn-option B" class="option"><?php echo "{$alternativa_B}" ?></label>
-          
-          <input type="button" id="btn-option C" class="option">
+          <input type="radio" id="btn-option C" name="alternativa" class="option" required>
           <label for="btn-option C" id="btn-option C" class="option"><?php echo "{$alternativa_C}" ?></label>
-
-          <input type="button" id="btn-option D" class="option">
+          <input type="radio" id="btn-option D" name="alternativa" class="option" required>
           <label for="btn-option D" id="btn-option D" class="option"><?php echo "{$alternativa_D}" ?></label>
-
           <div class="container-btn">
             <button id="display-pontos" class="btn-tentar" type="button">0 pts</button>
             <button id="enviar" class="btn-tentar" type="submit">Enviar Resposta</button>
           </div>
-        
         </form>
       </div>
     </section>
