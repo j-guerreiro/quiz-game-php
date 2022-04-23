@@ -95,12 +95,6 @@ switch ($valor) {
 
 #--------------------------------------------------------------------------------
 
-#a construir ...
-if($_POST) {
-
-  $respostaSelecionada = $_REQUEST['$alternativa_A'];
-
-}
 ?>
 
 <!DOCTYPE html>
@@ -131,9 +125,9 @@ if($_POST) {
         <?php echo "{$questao}"?>
       </div>
       <div class="container-choice">
-        <form method="$_POST" action="index.php" class="choices-inner">
-          <input type="radio" id="btn-option A" name="alternativa" class="option" value="<?php echo $_GET["$alternativa_A"]; ?>" required>
-          <label for="btn-option A" id="btn-option A" class="option"><?php echo "{$alternativa_A}" ?></label>
+        <form method="$_POST" action="resultado.php" class="choices-inner">
+          <input type="radio" id="btn-option A" name="alternativa" class="option" value="<?php echo "{$alternativa_A};" ?>" required>
+          <label for="btn-option A" class="option"><?php echo "{$alternativa_A}" ?></label>
           <input type="radio" id="btn-option B" name="alternativa" class="option" required>
           <label for="btn-option B" id="btn-option B" class="option"><?php echo "{$alternativa_B}" ?></label>
           <input type="radio" id="btn-option C" name="alternativa" class="option" required>
